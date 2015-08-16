@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>16941FA8-829A-4E0A-AEA3-0525ECD5AA75</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FlatButton</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D2EA622429464E813B9E16247274174A20BE9D8F</key>
+		<string>https://github.com/KentarouKanno/FlatButton.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FlatButton.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D2EA622429464E813B9E16247274174A20BE9D8F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/KentarouKanno/FlatButton.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D2EA622429464E813B9E16247274174A20BE9D8F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D2EA622429464E813B9E16247274174A20BE9D8F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FlatButton</string>
+		</dict>
+	</array>
+</dict>
+</plist>

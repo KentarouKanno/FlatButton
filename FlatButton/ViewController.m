@@ -39,6 +39,15 @@
     [btn2 setTitle:@"btn2" forState:UIControlStateNormal];
     [btn2 makeFlatButton];
     [self.view addSubview:btn2];
+    
+    FlatButton *btn3 = [FlatButton buttonWithType:UIButtonTypeCustom];
+    btn3.frame = CGRectMake(40, 400, 150, 30);
+    btn3.isRedColor = YES;
+    [btn3 setTitle:@"btn3" forState:UIControlStateNormal];
+    [btn3 makeFlatButton];
+    [self.view addSubview:btn3];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

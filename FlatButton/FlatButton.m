@@ -21,7 +21,7 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        _rect = frame;
+
     }
     return self;
 }
@@ -42,6 +42,8 @@
     self.exclusiveTouch = YES;
     self.backgroundColor = [UIColor clearColor];
     
+    _rect = self.frame;
+    
     UIView *v = [[UIView alloc]initWithFrame:_rect];
     if (_isRedColor) {
         [v setBackgroundColor:[UIColor colorWithRed:0.984 green:0.125 blue:0.145 alpha:1.000]];
@@ -54,7 +56,12 @@
     }
     v.layer.cornerRadius = 5.0;
     v.layer.masksToBounds = YES;
-    UIImage *image = [self convertUIimageFromUIview:v];
+    
+    UIImage *image;
+    
+    if (!CGRectEqualToRect(v.frame, CGRectZero)) {
+        image = [self convertUIimageFromUIview:v];
+    }
     
     [self setBackgroundImage:image forState:UIControlStateNormal];
 }
