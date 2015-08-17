@@ -12,6 +12,8 @@
 
 @property (nonatomic, readwrite) BOOL isRedColor;
 @property (nonatomic, readwrite) BOOL isGreenColor;
+@property (nonatomic, readwrite) BOOL isBlueColor;
+@property (nonatomic, readwrite) BOOL isGrayColor;
 
 -(void)makeFlatButton;
 

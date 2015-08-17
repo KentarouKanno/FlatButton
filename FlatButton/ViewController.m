@@ -35,18 +35,18 @@
     [self.view addSubview:btn1];
     
     FlatButton *btn2 = [[FlatButton alloc]initWithFrame:CGRectMake(40, 330, 150, 30)];
-    btn2.isGreenColor = YES;
-    [btn2 setTitle:@"btn2" forState:UIControlStateNormal];
+    btn2.isBlueColor = YES;
+    btn2.titleLabel.font = [UIFont systemFontOfSize:13];
+    [btn2 setTitle:@"initWithFrame Btn" forState:UIControlStateNormal];
     [btn2 makeFlatButton];
     [self.view addSubview:btn2];
     
     FlatButton *btn3 = [FlatButton buttonWithType:UIButtonTypeCustom];
     btn3.frame = CGRectMake(40, 400, 150, 30);
-    btn3.isRedColor = YES;
+    btn3.isGrayColor = YES;
     [btn3 setTitle:@"btn3" forState:UIControlStateNormal];
     [btn3 makeFlatButton];
     [self.view addSubview:btn3];
-    
     
 }
 
