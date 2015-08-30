@@ -10,11 +10,16 @@
 
 @interface FlatButton : UIButton
 
+// 定義されている色
 @property (nonatomic, readwrite) BOOL isRedColor;
 @property (nonatomic, readwrite) BOOL isGreenColor;
 @property (nonatomic, readwrite) BOOL isBlueColor;
 @property (nonatomic, readwrite) BOOL isGrayColor;
 
--(void)makeFlatButton;
+// グラデーションボタン
+@property (nonatomic, copy) UIColor *startColor;
+@property (nonatomic, copy) UIColor *endColor;
+
+-(void)generateFlatButton;
 
 @end

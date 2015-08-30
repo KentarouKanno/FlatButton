@@ -37,39 +37,50 @@
 
 -(void)awakeFromNib {
     
-    [self makeFlatButton];
+    [self generateFlatButton];
 }
 
--(void)makeFlatButton {
+-(void)generateFlatButton {
     
     self.exclusiveTouch = YES;
-    self.backgroundColor = [UIColor clearColor];
     
     _rect = self.frame;
-    
     _rect.size.width = _rect.size.width * 2;
     _rect.size.height = _rect.size.height * 2;
     
     
     UIView *v = [[UIView alloc]initWithFrame:_rect];
-    if (_isRedColor) {
-        [v setBackgroundColor:[UIColor colorWithRed:0.984 green:0.125 blue:0.145 alpha:1.000]];
-//        v.layer.borderColor = [UIColor colorWithRed:0.635 green:0.083 blue:0.101 alpha:1.000].CGColor;
-//        v.layer.borderWidth = 1.0;
-    } else if (_isGreenColor) {
-        [v setBackgroundColor:[UIColor colorWithRed:0.392 green:0.722 blue:0.125 alpha:1.000]];
-//        v.layer.borderColor = [UIColor colorWithRed:0.246 green:0.454 blue:0.082 alpha:1.000].CGColor;
-//        v.layer.borderWidth = 1.0;
-    } else if (_isBlueColor) {
+    v.layer.backgroundColor = self.backgroundColor.CGColor;
+    
+    self.backgroundColor = [UIColor clearColor];
+    
+    if (_startColor && _endColor) {
         
-        [v setBackgroundColor:[UIColor colorWithRed:0.153 green:0.388 blue:0.914 alpha:1.000]];
-    } else if (_isGrayColor) {
+        CAGradientLayer *gradient = [CAGradientLayer layer];
+        gradient.frame = v.bounds;
         
-        [v setBackgroundColor:[UIColor colorWithWhite:0.270 alpha:1.000]];
+        gradient.colors = @[(id)_startColor.CGColor,
+                            (id)_endColor.CGColor];
+        
+        gradient.cornerRadius = 10;
+        [v.layer insertSublayer: gradient atIndex: 0];
+        
+    } else {
+        
+        if (_isRedColor) {
+            [v setBackgroundColor:[UIColor colorWithRed:0.984 green:0.125 blue:0.145 alpha:1.000]];
+        } else if (_isGreenColor) {
+            [v setBackgroundColor:[UIColor colorWithRed:0.392 green:0.722 blue:0.125 alpha:1.000]];
+        } else if (_isBlueColor) {
+            [v setBackgroundColor:[UIColor colorWithRed:0.153 green:0.388 blue:0.914 alpha:1.000]];
+        } else if (_isGrayColor) {
+            [v setBackgroundColor:[UIColor colorWithWhite:0.270 alpha:1.000]];
+        }
+        
+        v.layer.cornerRadius = 10.0;
+        v.layer.masksToBounds = YES;
     }
     
-    v.layer.cornerRadius = 10.0;
-    v.layer.masksToBounds = YES;
     
     UIImage *image;
     
